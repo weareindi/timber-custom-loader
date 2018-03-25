@@ -1,0 +1,14 @@
+{
+    "name": "ozpital/timber-custom-loader",
+    "description": "A custom twig loader for Timber",
+    "keywords": ["wordpress", "plugin", "timber", "twig", "custom loader"],
+    "type": "wordpress-plugin",
+    "authors": [{
+        "name": "Laurence Archer",
+        "email": "l.archer@ozpital.com"
+    }],
+    "require": {
+        "timber/timber": "^1.0",
+        "composer/installers": "^1.0"
+    }
+}
