@@ -10,7 +10,11 @@ class TwigLoader implements \Twig_LoaderInterface
         self::$filename = $filename;
     }
 
-    public function getSourceContext($name) {
+    public function getSource($name) {
+        if (!self::getTemplatePath($name)) {
+            return;
+        }
+
         return new \Twig_Source(file_get_contents(self::getTemplatePath($name)) , $name);
     }
 
