@@ -18,6 +18,10 @@ class TwigLoader implements \Twig_LoaderInterface
         return new \Twig_Source(file_get_contents(self::getTemplatePath($name)) , $name);
     }
 
+    public function getSourceContext($name) {
+        return self::getSource($name);
+    }
+
     public function getCacheKey($name) {
         return $name;
     }
